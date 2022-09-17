@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
+		<title>Document</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Ubuntu", sans-serif;
+			}
+
+			body {
+				background-color: #000;
+				color: #fff;
+			}
+
+			.section.one {
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items: center;
+				position: relative;
+			}
+
+			.section.one h1 {
+				font-size: 3vw;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			.section.one p {
+				font-size: 40px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			.section.one ul li {
+				font-size: 24px;
+				margin-bottom: 10px;
+			}
+
+			.section.one span {
+				position: absolute;
+				bottom: 10px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			.section.two {
+				height: 300vh;
+				background-color: #fff;
+			}
+
+			.section.three {
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.section.three p {
+				font-size: 3vw;
+				font-weight: 700;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="section one">
+			<h1>Hooking Up GSAP to a Three.js Scene to try out a nice scrolltrigger animation.</h1>
+			<p>Couple of things learnt from this include:</p>
+			<ul>
+				<li>Modifying a 3D model using Blender</li>
+				<li>Using the GSAP ScrollTrigger plugin</li>
+				<li>Manipulating a 3d scene based on some user's action</li>
+			</ul>
+
+			<span>Scroll down</span>
+		</section>
+		<div class="section two"></div>
+		<div class="section three">
+			<p>The end...😅</p>
+		</div>
+		<script src="index.js" type="module"></script>
+	</body>
+</html>
