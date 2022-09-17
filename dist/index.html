@@ -7,8 +7,9 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
-		<title>Document</title>
+		<title>David Obodo: Laptop, Phone GSAP and Three.js experiment</title>
 
+		<!-- No need to abstract css to seperate file since code lines are not much -->
 		<style>
 			* {
 				margin: 0;
@@ -20,6 +21,7 @@
 			body {
 				background-color: #000;
 				color: #fff;
+				overflow: hidden;
 			}
 
 			.section.one {
@@ -29,10 +31,11 @@
 				flex-direction: column;
 				align-items: center;
 				position: relative;
+				padding: 0px 20px;
 			}
 
 			.section.one h1 {
-				font-size: 3vw;
+				font-size: clamp(60px, 3vw, 120px);
 				text-align: center;
 				margin-bottom: 20px;
 			}
@@ -68,8 +71,40 @@
 			}
 
 			.section.three p {
-				font-size: 3vw;
+				font-size: clamp(60px, 3vw, 120px);
 				font-weight: 700;
+			}
+
+			.screen-blocker {
+				display: block;
+				position: fixed;
+				z-index: 100000;
+				top: 0;
+				left: 0;
+				background-color: #000;
+				height: 100vh;
+				width: 100vw;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 18px;
+				font-weight: 500;
+				text-align: center;
+				padding: 0px 10px;
+			}
+
+			.screen-blocker span {
+				color: #9494df;
+			}
+
+			@media only screen and (min-width: 768px) {
+				body {
+					overflow: scroll;
+				}
+
+				.screen-blocker {
+					display: none;
+				}
 			}
 		</style>
 	</head>
@@ -88,6 +123,14 @@
 		<div class="section two"></div>
 		<div class="section three">
 			<p>The end...😅</p>
+		</div>
+
+		<div class="screen-blocker">
+			<p>
+				😅 Oops, not considering devices less than <span>&apos;768px&apos;</span> width for this experiment. View on a
+				device thats at least <span>&apos;768px&apos;</span> wide. <br />
+				Thank you
+			</p>
 		</div>
 		<script src="index.js" type="module"></script>
 	</body>
