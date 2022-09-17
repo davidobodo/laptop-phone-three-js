@@ -19,9 +19,32 @@
 			}
 
 			body {
+				background-color: #150c21;
 				background-color: #000;
 				color: #fff;
 				overflow: hidden;
+			}
+
+			p {
+				font-size: 40px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			ul li {
+				font-size: 24px;
+				margin-bottom: 10px;
+			}
+
+			a {
+				color: #fff;
+				cursor: pointer;
+				transition: transform 200ms ease-in-out;
+				display: inline-block;
+			}
+
+			a:hover {
+				transform: translateX(10px);
 			}
 
 			.section.one {
@@ -40,17 +63,6 @@
 				margin-bottom: 20px;
 			}
 
-			.section.one p {
-				font-size: 40px;
-				text-align: center;
-				margin-bottom: 20px;
-			}
-
-			.section.one ul li {
-				font-size: 24px;
-				margin-bottom: 10px;
-			}
-
 			.section.one span {
 				position: absolute;
 				bottom: 10px;
@@ -63,16 +75,25 @@
 				background-color: #fff;
 			}
 
+			#canvas-wrapper {
+			}
+
 			.section.three {
 				height: 100vh;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				flex-direction: column;
+				position: relative;
 			}
 
-			.section.three p {
+			.section.three h2 {
 				font-size: clamp(60px, 3vw, 120px);
 				font-weight: 700;
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+				transform: translateX(-50%);
 			}
 
 			.screen-blocker {
@@ -124,13 +145,27 @@
 			<div id="canvas-wrapper"></div>
 		</div>
 		<div class="section three">
-			<p>The end...😅</p>
-
-			<p>Links to original 3D model</p>
+			<p>Links to original 3D models</p>
 			<ul>
-				<li>Laptop:</li>
-				<li>Phont:</li>
+				<li>
+					Laptop:
+					<a
+						href="https://sketchfab.com/3d-models/macbook-low-poligonal-free-download-5d2c9be39d294d4a8fc702ac04cf3444"
+						target="_blank"
+						>Mackbook Low Poligonal</a
+					>
+				</li>
+				<li>
+					Phone:
+					<a
+						href="https://sketchfab.com/3d-models/apple-iphone-13-pro-max-4328dea00e47497dbeac73c556121bc9"
+						target="_blank"
+						>Apple Iphone 13 Pro max</a
+					>
+				</li>
 			</ul>
+
+			<h2>The end...😅</h2>
 		</div>
 		<div class="screen-blocker">
 			<p>
