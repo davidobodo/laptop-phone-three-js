@@ -9,127 +9,18 @@
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
 		<title>David Obodo: Laptop, Phone GSAP and Three.js experiment</title>
 
-		<!-- No need to abstract css to seperate file since code lines are not much -->
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-				font-family: "Ubuntu", sans-serif;
-			}
-
-			body {
-				background-color: #150c21;
-				background-color: #000;
-				color: #fff;
-				overflow: hidden;
-			}
-
-			p {
-				font-size: 40px;
-				text-align: center;
-				margin-bottom: 20px;
-			}
-
-			ul li {
-				font-size: 24px;
-				margin-bottom: 10px;
-			}
-
-			a {
-				color: #fff;
-				cursor: pointer;
-				transition: transform 200ms ease-in-out;
-				display: inline-block;
-			}
-
-			a:hover {
-				transform: translateX(10px);
-			}
-
-			.section.one {
-				height: 100vh;
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				align-items: center;
-				position: relative;
-				padding: 0px 20px;
-			}
-
-			.section.one h1 {
-				font-size: clamp(60px, 3vw, 120px);
-				text-align: center;
-				margin-bottom: 20px;
-			}
-
-			.section.one span {
-				position: absolute;
-				bottom: 10px;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-
-			.section.two {
-				height: 300vh;
-				background-color: #fff;
-			}
-
-			#canvas-wrapper {
-			}
-
-			.section.three {
-				height: 100vh;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				flex-direction: column;
-				position: relative;
-			}
-
-			.section.three p:last-of-type {
-				font-size: clamp(60px, 3vw, 120px);
-				font-weight: 700;
-				position: absolute;
-				bottom: 20px;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-
-			.screen-blocker {
-				display: block;
-				position: fixed;
-				z-index: 100000;
-				top: 0;
-				left: 0;
-				background-color: #000;
-				height: 100vh;
-				width: 100vw;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				font-size: 18px;
-				font-weight: 500;
-				text-align: center;
-				padding: 0px 10px;
-			}
-
-			.screen-blocker span {
-				color: #9494df;
-			}
-
-			@media only screen and (min-width: 768px) {
-				body {
-					overflow: scroll;
-				}
-
-				.screen-blocker {
-					display: none;
-				}
-			}
-		</style>
+		<link rel="stylesheet" href="./styles.css" />
 	</head>
 	<body>
+		<div class="loader">
+			<div class="lds-ring">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<span>Loading Models...</span>
+		</div>
 		<section class="section one">
 			<h1>Hooking Up GSAP to a Three.js Scene to try out a nice scrolltrigger animation.</h1>
 			<p>Couple of things learnt from this include:</p>
