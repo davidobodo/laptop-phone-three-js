@@ -37,6 +37,10 @@ a:hover {
 	transform: translateX(10px);
 }
 
+.block-scrolling {
+	overflow: hidden !important;
+}
+
 /* --------------------------------------------------------- */
 /* SPINNER */
 /* --------------------------------------------------------- */

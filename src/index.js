@@ -99,7 +99,9 @@ function initAnimations() {
 //------------------------------------------------------
 function removeLoader() {
 	const loader = document.querySelector(".loader");
+	const body = document.querySelector("body");
 	loader.style.display = "none";
+	body.classList.remove("block-scrolling");
 }
 
 function initApplication() {
