@@ -109,8 +109,4 @@ function initApplication() {
 	initAnimations();
 }
 
-document.onreadystatechange = () => {
-	if (document.readyState === "complete") {
-		initApplication();
-	}
-};
+export { initApplication };

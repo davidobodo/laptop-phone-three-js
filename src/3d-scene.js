@@ -1,5 +1,7 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { initApplication } from ".";
+
 class ThreeDScene {
 	constructor() {
 		// RENDERER
@@ -57,6 +59,8 @@ class ThreeDScene {
 			this.sceneLaptop = model;
 			model.position.y = -0.5;
 			model.position.z = 2.5;
+
+			initApplication();
 		});
 
 		// PHONE MODEL
